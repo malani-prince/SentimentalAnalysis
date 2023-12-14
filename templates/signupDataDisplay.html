@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .form-button {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #00796b;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Dynamic ID Printing</title>
+</head>
+
+<body>
+    <div class="button-container">
+        <h1 class="text-lg font-semibold mb-4">Inserted Details By you</h1>
+        <form action="/login_page">
+            <p id="output">You login Id is.....<h3>{{uid}}</h3></p>
+            <p id="output">You login first name is.....{{uname}}</p>
+            <p id="output">You login last name is.....{{lname}}</p>
+            <p id="output">You login phonenum is.....{{phonenum}}</p>
+            <p id="output">You login email is.....{{email}}</p>
+            <p id="output">You login password is.....{{password}}</p>
+
+            <br>
+            <button class="form-button" id="submitButton">Click Hear For Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

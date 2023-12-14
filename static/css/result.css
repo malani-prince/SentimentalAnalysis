@@ -1,0 +1,105 @@
+.header {
+    background-color: #ffffff;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    font-size: 60px;
+    justify-content: center;
+}
+/* Your existing CSS styles remain the same */
+
+/* CSS for the content div */
+.content {
+    display: flex;
+    justify-content: center;
+    /* Aligns the columns horizontally in the center */
+    min-height: 100vh;
+    /* Ensures that the content takes up at least the full viewport height */
+}
+
+/* CSS for the first column */
+.column-1 {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    /* Allow the height to adjust based on content */
+    flex: 0.6;
+    /* Takes up 60% of the available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    padding: 2rem;
+    /* Add padding to provide space between content and borders */
+}
+
+/* CSS for the table */
+.column-1 table {
+    width: 100%;
+    /* Adjust to fit the available space */
+    margin-bottom: 1rem;
+}
+
+.inside1,
+.inside2 {
+    padding: 10px;
+    height: auto;
+    /* Allow the height to adjust based on content */
+    width: auto;
+    /* Allow the width to adjust based on content */
+    border: 5px solid rgb(216, 148, 21);
+    border-radius: 12px;
+    font-size: 20px;
+    /* Updated font size */
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+    font-family: cursive;
+    background-color: #ffffff;
+    margin: 5px;
+    /* Add margin to space out the table cells */
+}
+
+/* CSS for the second column */
+.column-2 {
+    background-color: rgb(255, 255, 255);
+    flex: 0.4;
+    /* Takes up 40% of the available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    /* Add padding to provide space between content and borders */
+}
+
+/* CSS for the image div */
+.image-container img {
+    max-width: 100%;
+    /* Ensure the image fits within the container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+}
+
+/* CSS for the "Thank you!" div */
+.thank-you {
+    font-size: 45px;
+    /* Updated font size */
+    font-weight: 600;
+    color: #000000;
+    font-family: cursive;
+    margin-top: 10px;
+    /* Optional: Add margin between the image and "Thank you!" div */
+}
+
+.declare {
+    background-color: rgb(255, 255, 255);
+    font-size: 35px;
+    /* Updated font size */
+    font-weight: 600;
+    color: #000000;
+    font-family: cursive;
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md max-w-md">
+        <h1 class="text-2xl font-semibold text-center mb-4">Login</h1>
+        <div class="mb-7">
+            <hr>
+        </div>
+
+        <form id="login-form">
+
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700 font-medium">User Id</label>
+                <input type="text" id="username" name="username"
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-500"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-medium">Password</label>
+                <input type="password" id="password" name="password"
+                    class="w-full px-14 py-2 border rounded focus:outline-none focus:ring focus:border-blue-500"
+                    required>
+            </div>
+
+            <div class="mb-4 text-red-500" id="error-message"></div>
+
+            <div class="mb-4">
+                <button type="submit"
+                    class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring">Login</button>
+            </div>
+        </form>
+
+        <!-- Additional text and login button -->
+
+        <div class="mb-4">
+            <hr>
+        </div>
+
+        <div class="mb-4 flex flex-col items-center">
+            <p class="mb-2">Do not have an account?</p>
+            <button
+                class="w-auto p-11 bg-blue-500 text-white font-semibold py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring text-lg">
+                <a href="/signup_page">Sign Up</a>
+            </button>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const errorMessage = document.getElementById('error-message');
+
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            fetch('/check_poin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `id=${username}&password=${password}`,
+            })
+                .then((response) => response.text())
+                .then((data) => {
+                    if (data === "VAlid") {
+                        // Redirect to the dashboard or perform the necessary action upon successful login
+                        window.location.href = '/isPosOrNeg';
+                    } else {
+                        // Display an error message
+                        errorMessage.textContent = 'Invalid username or password. Please try again.';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+
+
+    </script>
+</body>
+
+</html>

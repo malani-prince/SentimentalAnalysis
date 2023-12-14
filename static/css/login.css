@@ -1,0 +1,249 @@
+.parent {
+  background-color: rgb(255, 255, 255);
+  height: 98vh;
+  width: 100%;
+  min-width: 266px;
+  min-height: 535px;
+}
+
+.login {
+  background-color: #ffffff;
+  padding-bottom: 3rem;
+  margin-top: -15px;
+}
+
+.header {
+  background-color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.heading {
+  text-align: center;
+  /* margin: 10px; */
+  background-color: #ffffff;
+  align-items: center;
+  font-size: 60px; /* Updated font size */
+  font-weight: 600;
+  color: #28282B;
+  font-family: cursive;
+}
+
+.login{
+  font-size: 30px; /* Updated font size */
+  font-weight: 600;
+  color: #000000;
+  font-family: cursive;
+  padding-top: 0.5rem;
+  height: 1.4rem;
+  margin-bottom: 6rem;
+  background-color: rgb(255, 255, 255);
+}
+.part1 {
+  width: 100%;
+  height: 10%;
+  background-color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 600;
+  font: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  text-align: center;
+
+  align-items: center;
+}
+
+.part2 {
+  width: 100%;
+  height: 90%;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+}
+
+
+/* .img2 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.image-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10rem;
+  text-align: center;
+
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form {
+  text-align: start;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  /* max-width: 35rem; */
+  margin: 0 auto;
+  width: 30%;
+  padding: 20px;
+  margin-left: 9rem;
+  margin-right: 6rem;
+  margin-top: 60px;
+  margin-bottom: 8rem;
+  height: fit-content;
+  border-radius: 10px;
+  /* height: 87%; */
+}
+
+/* .photo{
+    background-color: #000000;
+    border:2px solid white;
+    width: 50%;
+    height: 90%;
+    margin-top: 2rem;
+  } */
+.photo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 6rem;
+  align-items: center;
+  width: 30%;
+  /* Set the desired width of the img2 div */
+  height: 70%;
+  /* Set the desired height of the img2 div */
+}
+
+.img2 {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.img2 img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  text-align: left;
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 2px 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #28282B;
+  margin-top: -14px;
+  margin-left: 1.5rem;
+  font-size: 18px;
+  transition: opacity 0.2s ease-out;
+  opacity: 1;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.form-group label.active {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 2px 5px;
+  font-size: 12px;
+  color: #28282B;
+  margin-top: -36px;
+  margin-left: 0rem;
+  font-size: 20px;
+  transition: opacity 0.2s ease-out;
+  opacity: 1;
+}
+
+/* .form-group label.active {
+    position: absolute;
+    background-color: #d27f7f;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: #ffc486;
+    
+    font-size: 20px;
+    transition: opacity 0.2s ease-out; 
+    opacity: 1; 
+  } */
+
+.form-group input[type="name"],
+.form-group input[type="lastname"],
+.form-group input[type="phonenum"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 96%;
+  padding: 5px;
+  height: 3rem;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 2.5px solid #000000;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #2a2828;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  margin-top: -20px;
+  border: 2px solid #4e4e4e;
+}
+
+button[type="submit"]:hover {
+  background-color: black;
+  color: white;
+  border-radius: 9px;
+}
+
+.part1,
+.part2,
+.part3 {
+  flex: 1;
+}

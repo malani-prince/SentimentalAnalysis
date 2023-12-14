@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}" />
+</head>
+
+<body>
+   <div class="parent">
+      <div class="part1">
+         <div class="header">
+            <div class="heading">Sentiment Analyzer</div>
+         </div>
+      </div>
+
+      <div class="part2">
+
+         <div class="form">
+            <h2 class="login">Login !</h2>
+
+            <!-- goes to check point first anf decide whether the user are Proprly login or not -->
+            
+            <form action="/check_poin" method="post">
+
+               <div class="form-group">
+                  <label for="id" id="id-label">User id:</label>
+                  <input type="text" id="id" name="id" placeholder="User id" required>
+               </div>
+
+               <div class="form-group">
+                  <label for="password" id="password-label">Password:</label>
+                  <input type="password" id="password" name="password" placeholder="Password" required>
+               </div>
+
+               <div class="button-group">
+                  <button type="submit">Login</button>
+               </div>
+            </form>
+         </div>
+
+         <div class="photo">
+            <div class="img2">
+
+               <form action="/signup_page" method="post">
+
+                  <!-- <button type="submit">Sign Up</button> -->
+
+                  <a href="/signup_page"> <img src="{{ url_for('static', filename='images/sideicon.jpg') }}"
+                        alt="Image Description"></a>
+               </form>
+               <div class="text-center">
+                  <p class="text-2xl font-semibold text-gray-800 mb-4"><h2>For Sign In, Click Here or Click On Image</h2></p>
+                  <a href="/signup_page" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition duration-300">Sign In</a>
+               </div>
+               <!-- <p> To access the sign-in page, kindly click on image</p> -->
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <script>
+      // JavaScript code to toggle label visibility when typing in the input fields
+      const emailInput = document.getElementById('email');
+      const emailLabel = document.getElementById('email-label');
+      emailInput.addEventListener('input', () => {
+         emailLabel.classList.toggle('active', emailInput.value !== '');
+      });
+
+      const passwordInput = document.getElementById('password');
+      const passwordLabel = document.getElementById('password-label');
+      passwordInput.addEventListener('input', () => {
+         passwordLabel.classList.toggle('active', passwordInput.value !== '');
+      });
+
+      const nameInput = document.getElementById('name');
+      const nameLabel = document.getElementById('name-label');
+      nameInput.addEventListener('input', () => {
+         nameLabel.classList.toggle('active', nameInput.value !== '');
+      });
+      const phonenumInput = document.getElementById('phonenum');
+      const phonenumLabel = document.getElementById('phonenum-label');
+      phonenumInput.addEventListener('input', () => {
+         phonenumLabel.classList.toggle('active', phonenumInput.value !== '');
+      });
+      const lastnameInput = document.getElementById('lastname');
+      const lastnameLabel = document.getElementById('lastname-label');
+      lastnameInput.addEventListener('input', () => {
+         lastnameLabel.classList.toggle('active', lastnameInput.value !== '');
+      });
+   </script>
+</body>
+
+</html>

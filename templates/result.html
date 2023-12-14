@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}" />
+  <link href="https://cdn.tailwindcss.com/2.2.7/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    /* CSS for the textarea */
+    textarea {
+      width: 100%;
+      /* Adjust the width as needed */
+      height: 300px;
+      /* Adjust the height as needed */
+      border: 5px solid rgb(216, 148, 21);
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 600px;
+      text-align: center;
+      color: #000000;
+      font-family: cursive;
+      background-color: #ffffff;
+      margin: 5px;
+      resize: none;
+      /* Disable textarea resizing */
+      overflow: auto;
+      /* Add scrollbars if content exceeds the textarea dimensions */
+    }
+  </style>
+</head>
+
+<body style="overflow: hidden;">
+  <div class="header">
+    <div class="logo">
+
+      <div style="display: flex; justify-content: center">
+      
+        <div id="con-2" class="im">
+          <img src="../static/images/training.png" alt="Image 2" width="50" style="margin: 13px; ">
+        </div>
+        
+        <div class="heading">Sentiment Analyzer</div>
+      
+        <div id="con-2" class="im">
+          <img src="../static/images/training.png" alt="Image 2" width="50" style="margin: 13px; ">
+        </div>
+
+      </div>
+      
+      <div class="content" style="margin-top: -27px;">
+        <div class="column-1">
+
+          <Textarea style="overflow: scroll; width: 650px; height: 290px" class="inside1">{{ text }}</Textarea>
+          <h1 class="inside2">{{ predicted_label }}</h1>
+
+          <a href="/isPosOrNeg"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out"
+            style="font-size: 18px;">
+            <h3>Try Again</h3>
+          </a>
+        </div>
+
+        <div class="column-2">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/result.jpg') }}" alt="Image Description" />
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
